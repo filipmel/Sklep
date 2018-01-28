@@ -62,7 +62,7 @@ public class Zamowienie {
         return "Zamowienie: " + pozycje + "Razem: " + obliczWartoscZamowienia();
     }
 
-    public void edytujPozycje(int indeks, double cena, int ileSztuk, String nazwaTowaru) {
+    public void edytujPozycje(String nazwaTowaru, int ileSztuk, double cena, int indeks) {
 
         pozycje.get(indeks).cena = cena;
         pozycje.get(indeks).ileSztuk = ileSztuk;

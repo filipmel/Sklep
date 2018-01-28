@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pozycja pozycja1 = new Pozycja("cukier", 1, 2.3);
-        Pozycja pozycja2 = new Pozycja("cukier", 3, 4);
-        Pozycja pozycja3 = new Pozycja("chleb", 2, 1.3);
+        Pozycja pozycja1 = new Pozycja("cukier", 6, 2.3);
+        Pozycja pozycja2 = new Pozycja("cukier", 12, 2.3);
+        Pozycja pozycja3 = new Pozycja("chleb", 22, 1.9);
         Pozycja pozycja4 = new Pozycja("sok", 3, 2);
 
         Zamowienie zam1 = new Zamowienie(10);
@@ -22,7 +22,7 @@ public class Main {
 
         zam1.pokazZamowienie();
 
-        zam1.edytujPozycje(2, 12, 4, "cola");
+        zam1.edytujPozycje("cola", 12, 4, 1);
 
         zam1.pokazZamowienie();
         System.out.println("Wartość całego zamówienia: " + zam1.obliczWartoscZamowienia());

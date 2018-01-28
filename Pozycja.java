@@ -22,7 +22,9 @@ public class Pozycja {
 
         double poRabacie = 0;
 
-        if ((ileSztuk >= 5) && (ileSztuk <= 10)) {
+        if (ileSztuk < 5) {
+            return cena * ileSztuk;
+        } else if ((ileSztuk >= 5) && (ileSztuk <= 10)) {
             poRabacie = (cena * ileSztuk) * 0.95;
         } else if (((ileSztuk >= 10) && (ileSztuk <= 20))) {
             poRabacie = (cena * ileSztuk) * 0.90;
@@ -34,6 +36,6 @@ public class Pozycja {
 
     public String toString() {
 
-        return String.format("%-20s%-10s%-10s%-10s", nazwaTowaru, cena + " zł", ileSztuk + " szt.", "Pozycja razem " + obliczWartoscPozycji() + " zł");
+        return String.format("%-10s%-10s%-10s%-5s", nazwaTowaru, cena + " zł", ileSztuk + " szt.", "Pozycja razem " + obliczWartoscPozycji() + " zł");
     }
 }
